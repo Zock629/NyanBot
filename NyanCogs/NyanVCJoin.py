@@ -12,7 +12,8 @@ class NyanMusic:
 	async def _join(self, ctx):
 		server = ctx.message.server
 		IfConnected = self.bot.is_voice_connected(server)
-		if IfConnected
+		print(IfConnected)
+		if IfConnected == False:
 			count = 0											 # Sets count to 0
 			for channel in server.channels:						 # Loops for all of the channels within the server											[Used to get the amount of channels in the server]
 				count = count + 1								 # Adds 1 to count																			[Used to get the amount of channels in the server]
