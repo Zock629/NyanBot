@@ -2,8 +2,7 @@ import discord
 import asyncio
 from discord.ext import commands
 
-class NyanMusic:
-	"""Default Cog Template"""
+class NyanVCJoin:
 	def __init__(self, bot):
 		self.bot = bot
 		
@@ -63,4 +62,4 @@ class NyanMusic:
 			await self.bot.say('Please use !!leave first nyan~')
 		
 def setup(bot):
-	bot.add_cog(NyanMusic(bot))
+	bot.add_cog(NyanVCJoin(bot))

@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Ping:
+class Nyan:
 	"""Default Cog Template"""
 	def __init__(self, bot):
 		self.bot = bot
@@ -11,4 +11,4 @@ class Ping:
 		await self.bot.say("pong nyan~")
 
 def setup(bot):
-	bot.add_cog(Ping(bot))
+	bot.add_cog(Nyan(bot))

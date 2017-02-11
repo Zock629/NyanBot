@@ -2,14 +2,14 @@ import discord
 import asyncio
 from discord.ext import commands
 
-class NyanMusic:
+class NyanVCLeave:
 	"""Default Cog Template"""
 	def __init__(self, bot):
 		self.bot = bot
 		
 	@commands.command(name='leave', pass_context=True)
 	@asyncio.coroutine
-	async def _join(self, ctx):
+	async def _leave(self, ctx):
 		server = ctx.message.server
 		print("Attempting ot leave voice channel in Sever: ",server)
 	
@@ -27,4 +27,4 @@ class NyanMusic:
 			await self.bot.say('Failed to disconnected from voice channel nyaa~')
 			
 def setup(bot):
-	bot.add_cog(NyanMusic(bot))
+	bot.add_cog(NyanVCLeave(bot))

@@ -1,9 +1,11 @@
 import discord
 import asyncio
 import os
+import youtube_dl
 from os import listdir
 from os.path import isfile, join
 from discord.ext import commands
+from discord import opus
 
 desc = "NyanBot is a bot coded in Python"
 bot = commands.Bot(command_prefix="!!", description=desc, pm_help=True)
@@ -19,7 +21,7 @@ async def on_ready():
 	for cog in NyanCogs:
 		Nyu = 'NyanCogs.' + cog.replace('.py', '')
 		bot.load_extension(Nyu)
-		
+	
 @bot.event
 @asyncio.coroutine
 async def on_message(message):
