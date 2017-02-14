@@ -1,5 +1,9 @@
+import asyncio
 import discord
+import youtube_dl
+import os
 from discord.ext import commands
+from discord import opus
 
 class NyanVoice:
 	def __init__(self, bot):
@@ -78,7 +82,6 @@ class NyanVoice:
 		else:
 			print('Failed to disconnect from voice channel in server: ',server)
 			await self.bot.say('Failed to disconnected from voice channel nyaa~')
-			
 	
 def setup(bot):
 	bot.add_cog(NyanVoice(bot))

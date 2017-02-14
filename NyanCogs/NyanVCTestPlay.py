@@ -9,7 +9,7 @@ class NyanVCTestPlay:
 		self.bot = bot
 		# discord.opus.load_opus("libopus.so.0")
 
-	@commands.command(name='play', pass_context=True)
+	@commands.command(name='playyou', pass_context=True)
 	async def _play(self, ctx):
 		server = ctx.message.server
 		voice = self.bot.voice_client_in(server)
